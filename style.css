@@ -1,0 +1,118 @@
+
+/* Basic page styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main box */
+.todo-container {
+    width: 90%;
+    max-width: 450px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #111827;
+}
+
+/* Input and button */
+.todo-input {
+    display: flex;
+    gap: 10px;
+}
+
+.todo-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.todo-input button {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.todo-input button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Task list */
+#task-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+/* Individual task styling */
+#task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+}
+
+/* Task name */
+#task-list li span {
+    flex: 1;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+}
+
+/* Delete button */
+#task-list li button {
+    padding: 7px 10px;
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#task-list li button:hover {
+    background-color: #b91c1c;
+}
+
+/* Small screen adjustment */
+@media (max-width: 480px) {
+    .todo-container {
+        padding: 20px;
+    }
+
+    .todo-input {
+        flex-direction: column;
+    }
+
+    .todo-input button {
+        width: 100%;
+    }
+}
